@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COFFEE GARDEN – kawiarnia w Krakowie, Józefa 11</title>
+<meta name="description" content="COFFEE GARDEN – kawiarnia w Krakowie przy ulicy Józefa 11. Ocena Google 4.7 na podstawie 1156 opinii. Zadzwoń lub napisz do nas.">
+<style>
+  :root {
+    --brown-dark: #2e1b10;
+    --brown: #4a2c1a;
+    --cream: #fbf5ec;
+    --sand: #f1e6d4;
+    --green: #2f5d46;
+    --caramel: #f0c17a;
+    --text: #2e1b10;
+    --muted: #5a4638;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.65;
+    font-size: 1.05rem;
+  }
+  h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  a { color: var(--green); }
+  a:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--caramel);
+    outline-offset: 3px;
+  }
+  .wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* HERO */
+  .hero {
+    background:
+      radial-gradient(circle at 85% 15%, rgba(240,193,122,.22), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(47,93,70,.55), transparent 50%),
+      linear-gradient(160deg, var(--brown-dark), var(--brown));
+    color: #fff;
+    padding: 4rem 0 4.5rem;
+    text-align: center;
+  }
+  .hero .icon { font-size: 3rem; display: block; margin-bottom: .75rem; }
+  .eyebrow {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.3);
+    color: #fff;
+    padding: .3rem .9rem;
+    border-radius: 999px;
+    font-size: .95rem;
+    letter-spacing: .04em;
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    letter-spacing: .06em;
+    margin-bottom: .9rem;
+  }
+  .hero p.lead {
+    max-width: 34rem;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+    color: #f5ebdd;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    background: var(--caramel);
+    color: var(--brown-dark);
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 1.05rem 2.2rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.3);
+    width: 100%;
+    max-width: 22rem;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #f7d18f; transform: translateY(-2px); }
+  .hero .addr { margin-top: 1.4rem; color: #f5ebdd; font-size: 1rem; }
+
+  /* SECTIONS */
+  section { padding: 3.5rem 0; }
+  h2 { font-size: 1.8rem; margin-bottom: .6rem; color: var(--brown); }
+  .section-intro { color: var(--muted); max-width: 38rem; margin-bottom: 2rem; }
+
+  .cards { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+  .card {
+    background: #fff;
+    border: 1px solid var(--sand);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(74,44,26,.06);
+  }
+  .card .ico {
+    width: 3rem; height: 3rem;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--sand);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+  }
+  .card h3 { font-size: 1.2rem; margin-bottom: .4rem; color: var(--brown); }
+  .card p { color: var(--muted); }
+
+  .services { background: var(--sand); }
+  .services .card { background: var(--cream); }
+  .note {
+    margin-top: 1.6rem;
+    padding: 1rem 1.2rem;
+    background: #fff;
+    border-left: 5px solid var(--green);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+
+  /* OPINIE */
+  .rating-box {
+    background: var(--green);
+    color: #fff;
+    border-radius: 20px;
+    padding: 2.2rem 1.5rem;
+    text-align: center;
+  }
+  .rating-box .score {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stars { color: var(--caramel); font-size: 1.7rem; letter-spacing: .15em; margin: .5rem 0; }
+  .rating-box p { font-size: 1.1rem; }
+
+  /* KONTAKT */
+  .contact { background: var(--brown-dark); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact-list { list-style: none; display: grid; gap: 1rem; margin-top: 1.5rem; }
+  .contact-list li {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .contact-list .ico { font-size: 1.6rem; line-height: 1.2; }
+  .contact-list .label { display: block; font-size: .9rem; color: #e6d6c0; }
+  .contact-list a { color: var(--caramel); font-weight: 600; word-break: break-word; }
+  .contact-list address { font-style: normal; font-weight: 600; }
+  .contact .btn { margin-top: 1.8rem; }
+
+  footer {
+    background: #1f120a;
+    color: #e6d6c0;
+    text-align: center;
+    padding: 1.6rem 1.25rem;
+    font-size: .95rem;
+  }
+
+  @media (min-width: 700px) {
+    .hero { padding: 6rem 0 6.5rem; }
+    .hero h1 { font-size: 3.6rem; }
+    .btn { width: auto; }
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .contact-list { grid-template-columns: repeat(3, 1fr); }
+    .contact-list li { flex-direction: column; }
+    h2 { font-size: 2.1rem; }
+    section { padding: 4.5rem 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="icon" aria-hidden="true">☕</span>
+    <span class="eyebrow">Kawiarnia · Kraków</span>
+    <h1>COFFEE GARDEN</h1>
+    <p class="lead">Kawiarnia w Krakowie, w której zatrzymasz się na dobrą kawę i chwilę oddechu w ciągu dnia.</p>
+    <a class="btn" href="tel:+48692351377"><span aria-hidden="true">📞</span> Zadzwoń</a>
+    <p class="addr">Józefa 11, 31-056 Kraków</p>
+  </div>
+</header>
+
+<main>
+  <section id="dlaczego">
+    <div class="wrap">
+      <h2>Dlaczego my</h2>
+      <p class="section-intro">Lokalna kawiarnia to miejsce blisko ludzi i ich codziennych spraw. Oto, co to dla Ciebie oznacza.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">📍</div>
+          <h3>Blisko Ciebie</h3>
+          <p>Jesteśmy w Krakowie, więc wpadniesz do nas w drodze do pracy, na spacerze albo na spotkaniu ze znajomymi.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🤝</div>
+          <h3>Lokalna atmosfera</h3>
+          <p>Mała, lokalna kawiarnia to swojskie podejście, bezpośredni kontakt i miejsce, do którego chce się wracać.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🌿</div>
+          <h3>Chwila przerwy</h3>
+          <p>Dobre miejsce, żeby na moment zwolnić, napić się kawy i odpocząć od codziennego pośpiechu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="uslugi" class="services">
+    <div class="wrap">
+      <h2>Zakres usług</h2>
+      <p class="section-intro">COFFEE GARDEN to kawiarnia, więc możesz tu liczyć na kawę i inne napoje oraz miejsce do spotkania lub chwili odpoczynku.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">☕</div>
+          <h3>Kawa i napoje</h3>
+          <p>Kawa oraz napoje na miejscu, na każdą porę dnia.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">🥐</div>
+          <h3>Coś do kawy</h3>
+          <p>Kawiarnia to także miejsce na małą przekąskę lub coś słodkiego do kawy.</p>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">💬</div>
+          <h3>Miejsce spotkań</h3>
+          <p>Przestrzeń na rozmowę ze znajomymi, chwilę z książką albo krótką przerwę w pracy.</p>
+        </article>
+      </div>
+      <p class="note">Szczegółowy zakres usług i aktualną ofertę potwierdza właściciel. Zadzwoń lub napisz, aby dowiedzieć się więcej.</p>
+    </div>
+  </section>
+
+  <section id="opinie">
+    <div class="wrap">
+      <h2>Opinie</h2>
+      <p class="section-intro">Tak oceniają nas osoby, które nas odwiedziły.</p>
+      <div class="rating-box" role="group" aria-label="Ocena Google 4.7 na podstawie 1156 opinii">
+        <div class="score">4.7</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>Ocena w Google na podstawie <strong>1156</strong> opinii</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact">
+    <div class="wrap">
+      <h2>Kontakt</h2>
+      <p>Odwiedź nas, zadzwoń albo napisz wiadomość.</p>
+      <ul class="contact-list">
+        <li>
+          <span class="ico" aria-hidden="true">📍</span>
+          <div>
+            <span class="label">Adres</span>
+            <address>Józefa 11<br>31-056 Kraków</address>
+          </div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true">📞</span>
+          <div>
+            <span class="label">Telefon</span>
+            <a href="tel:+48692351377">+48 692 351 377</a>
+          </div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true">✉️</span>
+          <div>
+            <span class="label">E-mail</span>
+            <a href="mailto:coffee.garden.krk@gmail.com">coffee.garden.krk@gmail.com</a>
+          </div>
+        </li>
+      </ul>
+      <a class="btn" href="tel:+48692351377"><span aria-hidden="true">📞</span> Zadzwoń</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Wersja demonstracyjna przygotowana przez KREATO - treści do uzupełnienia przez właściciela.</p>
+</footer>
+
+</body>
+</html>
