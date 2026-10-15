@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga Room Warszawa - Bikram Joga/Vinyasa</title>
+<style>
+  :root {
+    --ciemny: #1a3a3a;
+    --zielony: #2d6a4f;
+    --jasny-zielony: #40916c;
+    --kremowy: #f8f6f1;
+    --bialy: #ffffff;
+    --tekst: #2c3e50;
+    --tekst-jasny: #5a6c7d;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--tekst);
+    line-height: 1.6;
+    background: var(--kremowy);
+  }
+
+  .kontener {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--ciemny) 0%, var(--zielony) 100%);
+    color: var(--bialy);
+    padding: 5rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-ikona {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .hero-branza {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-miasto {
+    font-size: 1rem;
+    opacity: 0.75;
+    margin-bottom: 2rem;
+  }
+
+  .przycisk-telefon {
+    display: inline-block;
+    background: var(--bialy);
+    color: var(--ciemny);
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .przycisk-telefon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  .przycisk-telefon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    fill: currentColor;
+  }
+
+  /* Sekcje */
+  .sekcja {
+    padding: 3.5rem 0;
+  }
+
+  .sekcja-naglowek {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .sekcja-naglowek h2 {
+    font-size: 1.75rem;
+    color: var(--ciemny);
+    margin-bottom: 0.5rem;
+  }
+
+  .linia {
+    width: 60px;
+    height: 3px;
+    background: var(--zielony);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  /* O firmie */
+  .o-firmie {
+    background: var(--bialy);
+  }
+
+  .o-firmie-tekst {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--tekst-jasny);
+  }
+
+  /* Oferta */
+  .oferta {
+    background: var(--kremowy);
+  }
+
+  .oferta-tekst {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--tekst-jasny);
+    font-style: italic;
+    padding: 1.5rem;
+    border-left: 3px solid var(--zielony);
+    background: var(--bialy);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Opinie */
+  .opinie {
+    background: var(--bialy);
+  }
+
+  .opinie-karta {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background: var(--kremowy);
+    border-radius: 16px;
+  }
+
+  .opinie-gwiazdki {
+    font-size: 1.5rem;
+    color: #e9c46a;
+    margin-bottom: 1rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .opinie-ocena {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ciemny);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .opinie-liczba {
+    font-size: 1rem;
+    color: var(--tekst-jasny);
+  }
+
+  /* Kontakt */
+  .kontakt {
+    background: linear-gradient(135deg, var(--ciemny) 0%, var(--zielony) 100%);
+    color: var(--bialy);
+  }
+
+  .kontakt .sekcja-naglowek h2 {
+    color: var(--bialy);
+  }
+
+  .kontakt .linia {
+    background: var(--jasny-zielony);
+  }
+
+  .kontakt-dane {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .kontakt-pozycja {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    transition: background 0.2s;
+  }
+
+  .kontakt-pozycja:hover {
+    background: rgba(255,255,255,0.12);
+  }
+
+  .kontakt-ikona {
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .kontakt-ikona svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: var(--bialy);
+  }
+
+  .kontakt-etykieta {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .kontakt-wartosc {
+    font-size: 1.05rem;
+    font-weight: 500;
+    word-break: break-word;
+  }
+
+  .kontakt-wartosc a {
+    color: var(--bialy);
+    text-decoration: none;
+  }
+
+  .kontakt-wartosc a:hover {
+    text-decoration: underline;
+  }
+
+  /* Stopka */
+  .stopka {
+    background: var(--ciemny);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Responsywnosc */
+  @media (min-width: 768px) {
+    .hero {
+      padding: 6rem 0 5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+    }
+
+    .hero-branza {
+      font-size: 1.25rem;
+    }
+
+    .sekcja {
+      padding: 5rem 0;
+    }
+
+    .sekcja-naglowek h2 {
+      font-size: 2.25rem;
+    }
+
+    .kontakt-dane {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="kontener">
+    <span class="hero-ikona" aria-hidden="true">🧘</span>
+    <h1>Yoga Room Warszawa<br>Bikram Joga/Vinyasa</h1>
+    <p class="hero-branza">fitness / studio jogi</p>
+    <p class="hero-miasto">Warszawa</p>
+    <a href="tel:+48601821442" class="przycisk-telefon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      Zadzwoń
+    </a>
+  </div>
+</section>
+
+<section class="sekcja o-firmie">
+  <div class="kontener">
+    <div class="sekcja-naglowek">
+      <h2>O nas</h2>
+      <div class="linia"></div>
+    </div>
+    <p class="o-firmie-tekst">Yoga Room Warszawa – Bikram Joga/Vinyasa to studio jogi w Warszawie, mieszczące się przy ulicy Podbipięty 27/91 na 2 piętrze.</p>
+  </div>
+</section>
+
+<section class="sekcja oferta">
+  <div class="kontener">
+    <div class="sekcja-naglowek">
+      <h2>Oferta</h2>
+      <div class="linia"></div>
+    </div>
+    <p class="oferta-tekst">Tutaj pojawi się opis oferty – uzupełnimy go razem z właścicielem.</p>
+  </div>
+</section>
+
+<section class="sekcja opinie">
+  <div class="kontener">
+    <div class="sekcja-naglowek">
+      <h2>Opinie</h2>
+      <div class="linia"></div>
+    </div>
+    <div class="opinie-karta">
+      <div class="opinie-gwiazdki" aria-hidden="true">★★★★★</div>
+      <div class="opinie-ocena">4,9</div>
+      <p class="opinie-liczba">42 opinie</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekcja kontakt">
+  <div class="kontener">
+    <div class="sekcja-naglowek">
+      <h2>Kontakt</h2>
+      <div class="linia"></div>
+    </div>
+    <div class="kontakt-dane">
+      <div class="kontakt-pozycja">
+        <div class="kontakt-ikona">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+          <p class="kontakt-etykieta">Adres</p>
+          <p class="kontakt-wartosc">Podbipięty 27/91 2 PIĘTRO<br>02-729 Warszawa</p>
+        </div>
+      </div>
+      <div class="kontakt-pozycja">
+        <div class="kontakt-ikona">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div>
+          <p class="kontakt-etykieta">Telefon</p>
+          <p class="kontakt-wartosc"><a href="tel:+48601821442">+48 601 821 442</a></p>
+        </div>
+      </div>
+      <div class="kontakt-pozycja">
+        <div class="kontakt-ikona">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div>
+          <p class="kontakt-etykieta">E-mail</p>
+          <p class="kontakt-wartosc"><a href="mailto:yogaroom.warszawa@gmail.com">yogaroom.warszawa@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="stopka">
+  <div class="kontener">
+    <p>Wersja demonstracyjna przygotowana przez KREATO – treści do uzupełnienia przez właściciela</p>
+  </div>
+</footer>
+
+</body>
+</html>
