@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Księgowy EXPERT biuro rachunkowe – Poznań</title>
+<style>
+:root {
+--granat: #1a2a4a;
+--zloty: #c9a84c;
+--jasny: #f5f5f0;
+--ciemny: #0f1a2e;
+--tekst: #2c3e50;
+--bialy: #ffffff;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.6;
+color: var(--tekst);
+background: var(--jasny);
+}
+
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 1.25rem;
+}
+
+.hero {
+background: linear-gradient(160deg, var(--granat) 0%, var(--ciemny) 100%);
+color: var(--bialy);
+padding: 5rem 0 4rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -20%;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+border-radius: 50%;
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero-icon {
+font-size: 3rem;
+margin-bottom: 1.5rem;
+display: block;
+}
+
+.hero h1 {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 0.5rem;
+line-height: 1.2;
+}
+
+.hero .tagline {
+font-size: 1.1rem;
+color: var(--zloty);
+font-weight: 500;
+margin-bottom: 2.5rem;
+letter-spacing: 0.02em;
+}
+
+.btn-call {
+display: inline-flex;
+align-items: center;
+gap: 0.75rem;
+background: var(--zloty);
+color: var(--ciemny);
+padding: 1rem 2.5rem;
+border-radius: 4px;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.05rem;
+transition: all 0.2s ease;
+border: 2px solid var(--zloty);
+}
+
+.btn-call:hover {
+background: transparent;
+color: var(--zloty);
+}
+
+.btn-call svg {
+width: 1.25rem;
+height: 1.25rem;
+fill: currentColor;
+}
+
+section {
+padding: 3.5rem 0;
+}
+
+.section-title {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--granat);
+margin-bottom: 1.5rem;
+position: relative;
+padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 50px;
+height: 3px;
+background: var(--zloty);
+}
+
+.o-firmie {
+background: var(--bialy);
+}
+
+.o-firmie p {
+font-size: 1.05rem;
+line-height: 1.8;
+max-width: 700px;
+}
+
+.oferta {
+background: var(--jasny);
+}
+
+.oferta-box {
+background: var(--bialy);
+border-left: 4px solid var(--zloty);
+padding: 1.75rem;
+border-radius: 0 8px 8px 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.oferta-box p {
+font-size: 1.05rem;
+color: var(--tekst);
+font-style: italic;
+}
+
+.opinie {
+background: var(--granat);
+color: var(--bialy);
+}
+
+.opinie .section-title {
+color: var(--bialy);
+}
+
+.opinie .section-title::after {
+background: var(--zloty);
+}
+
+.rating-box {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+flex-wrap: wrap;
+}
+
+.rating-number {
+font-size: 3.5rem;
+font-weight: 800;
+color: var(--zloty);
+line-height: 1;
+}
+
+.rating-details {
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+}
+
+.stars {
+color: var(--zloty);
+font-size: 1.25rem;
+letter-spacing: 0.1em;
+}
+
+.rating-count {
+color: rgba(255,255,255,0.8);
+font-size: 0.95rem;
+}
+
+.kontakt {
+background: var(--bialy);
+}
+
+.kontakt-grid {
+display: grid;
+gap: 1.5rem;
+}
+
+.kontakt-item {
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+padding: 1.25rem;
+background: var(--jasny);
+border-radius: 8px;
+}
+
+.kontakt-item svg {
+width: 1.5rem;
+height: 1.5rem;
+flex-shrink: 0;
+color: var(--granat);
+margin-top: 0.1rem;
+}
+
+.kontakt-item .label {
+font-size: 0.85rem;
+color: #666;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-bottom: 0.25rem;
+font-weight: 600;
+}
+
+.kontakt-item .value {
+font-size: 1.05rem;
+color: var(--granat);
+font-weight: 500;
+}
+
+.kontakt-item a {
+color: var(--granat);
+text-decoration: none;
+}
+
+.kontakt-item a:hover {
+color: var(--zloty);
+}
+
+.stopka {
+background: var(--ciemny);
+color: rgba(255,255,255,0.7);
+padding: 2rem 0;
+text-align: center;
+font-size: 0.9rem;
+line-height: 1.7;
+}
+
+.stopka strong {
+color: var(--zloty);
+}
+
+@media (min-width: 640px) {
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero .tagline {
+font-size: 1.2rem;
+}
+
+.kontakt-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.kontakt-grid .kontakt-item:first-child {
+grid-column: 1 / -1;
+}
+}
+
+@media (min-width: 768px) {
+section {
+padding: 4.5rem 0;
+}
+
+.hero {
+padding: 6rem 0 5rem;
+}
+
+.hero h1 {
+font-size: 3rem;
+}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="container hero-content">
+<span class="hero-icon">📊</span>
+<h1>Księgowy EXPERT<br>biuro rachunkowe</h1>
+<p class="tagline">Poznań</p>
+<a href="tel:+48507548604" class="btn-call">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.057 15.057 0 01-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1.01A11.36 11.36 0 018.59 3.99c0-.55-.45-1-1-1H4.08c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM5.03 5h1.5c.07.88.22 1.75.45 2.58l-1.2 1.21c-.4-1.21-.66-2.47-.75-3.79zM19 18.97c-1.32-.09-2.6-.35-3.8-.76l1.2-1.2c.85.24 1.72.39 2.6.45v1.51z"/></svg>
+Zadzwoń: +48 507 548 604
+</a>
+</div>
+</header>
+
+<section class="o-firmie">
+<div class="container">
+<h2 class="section-title">O firmie</h2>
+<p>Księgowy EXPERT biuro rachunkowe świadczy usługi w Poznaniu przy ulicy Zgoda 14/10.</p>
+</div>
+</section>
+
+<section class="oferta">
+<div class="container">
+<h2 class="section-title">Oferta</h2>
+<div class="oferta-box">
+<p>Tutaj pojawi się opis oferty – uzupełnimy go razem z właścicielem.</p>
+</div>
+</div>
+</section>
+
+<section class="opinie">
+<div class="container">
+<h2 class="section-title">Opinie klientów</h2>
+<div class="rating-box">
+<span class="rating-number">4.4</span>
+<div class="rating-details">
+<span class="stars">★★★★★</span>
+<span class="rating-count">39 opinii w Google</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="kontakt">
+<div class="container">
+<h2 class="section-title">Kontakt</h2>
+<div class="kontakt-grid">
+<div class="kontakt-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<div>
+<div class="label">Adres</div>
+<div class="value">Zgoda 14/10, 60-128 Poznań</div>
+</div>
+</div>
+<div class="kontakt-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+<div>
+<div class="label">Telefon</div>
+<div class="value"><a href="tel:+48507548604">+48 507 548 604</a></div>
+</div>
+</div>
+<div class="kontakt-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<div>
+<div class="label">E-mail</div>
+<div class="value"><a href="mailto:biuro@ksiegowyexpert.pl">biuro@ksiegowyexpert.pl</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="stopka">
+<div class="container">
+<p>Wersja demonstracyjna przygotowana przez <strong>KREATO</strong> – treści do uzupełnienia przez właściciela</p>
+</div>
+</footer>
+
+</body>
+</html>
